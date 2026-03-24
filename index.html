@@ -1,136 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
     }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
     }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: #0000001a;
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow: inset 0 0.5em 1.5em #0000001a, inset 0 0.125em 0.5em #00000026;
     }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
     }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
     }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
     }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
     }
-      .bd-mode-toggle {
-        z-index: 1500;
+    .bd-mode-toggle {
+      z-index: 1500;
     }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
+    .bd-mode-toggle .bi {
+      width: 1em;
+      height: 1em;
     }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
     }
-      .full-width {
-        width: 100%;
-        max-width: 100%;
+    .full-width {
+      width: 100%;
+      max-width: 100%;
     }
     .my-img {
-        width: 112px;
+      width: 112px;
     }
     .my-img2 {
-        width: 201px;
+      width: 201px;
     }
     .my-img3 {
-        width: 61px;
+      width: 61px;
     }
     .my-img4 {
-        width: 210px;
+      width: 210px;
     }
     .my-img5 {
-        width: 181px;
+      width: 181px;
     }
-
-
-    </style>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>New Age - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-       <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-            <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="#page-top">MyPetGo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="bi-list"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#language">Language</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>MyPetGo</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+      <div class="container px-5">
+        <a class="navbar-brand fw-bold" href="#page-top">MyPetGo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+            <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link me-lg-3" href="#language">Language</a></li>
+            <li class="nav-item"><a class="nav-link me-lg-3" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
       <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -142,245 +146,225 @@
             aria-current="true"
             aria-label="Slide 1"
           ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <!-- Mashead header-->
         <header class="masthead">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <!-- Mashead text and app badges-->
-                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-1 lh-1 mb-3">MyPetGo</h1>
-                            <p class="lead fw-normal text-muted mb-5"></p>
-                            <div class="d-flex flex-column flex-lg-row align-items-center">
-                                <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!-- Masthead device mockup feature-->
-                        <div class="masthead-device-mockup">
-                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop class="gradient-start-color" offset="0%"></stop>
-                                        <stop class="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="50"></circle></svg>
-                                <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
-                            <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                            <div class="device-wrapper">
-                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                    <div class="screen bg-black">
-                                        <!-- PUT CONTENTS HERE:-->
-                                        <!-- * * This can be a video, image, or just about anything else.-->
-                                        <!-- * * Set the max width of your media to 100% and the height to-->
-                                        <!-- * * 100% like the demo example below.-->
-                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/Login.mp4" type="video/mp4" /></video>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+              <div class="col-lg-6">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                  <h1 class="display-1 lh-1 mb-3">MyPetGo</h1>
+                  <p class="lead fw-normal text-muted mb-5"></p>
+                  <div class="d-flex flex-column flex-lg-row align-items-center">
+                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-6">
+                <!-- Masthead device mockup feature-->
+                <div class="masthead-device-mockup">
+                  <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                        <stop class="gradient-start-color" offset="0%"></stop>
+                        <stop class="gradient-end-color" offset="100%"></stop>
+                      </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="50"></circle>
+                  </svg>
+                  <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                    <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                  </svg>
+                  <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                  <div class="device-wrapper">
+                    <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                      <div class="screen bg-black">
+                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%">
+                          <source src="assets/img/Login.mp4" type="video/mp4" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </header>
-        
+
         <!-- Quote/testimonial aside-->
         <aside class="text-center bg-gradient-primary-to-secondary">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-xl-8">
-                    </div>
-                </div>
+          <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+              <div class="col-xl-8"></div>
             </div>
+          </div>
         </aside>
         <!-- App features section-->
         <section id="features">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                        <div class="container-fluid px-5">
-                            <div class="row gx-5">
-                                <div class="col-md-6 mb-5">
-                                    <!-- Feature item-->
-                                    <div class="text-center">
-                                        <i class="bi bi-bell-fill" style="font-size:40px;"></i>
-                                        <h3 class="font-alt">Notificações e Lembretes Automáticos</h3>
-                                        <p class="text-muted mb-0">A app envia notificações para lembrar o utilizador do dia e hora do pedido agendado,
-                                         além de avisar quando o serviço estiver prestes a começar, em curso ou concluído.
-                                         Isto ajuda a manter o utilizador sempre informado e evita esquecimentos.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-5">
-                                    <!-- Feature item-->
-                                    <div class="text-center">
-                                        <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Pedidos</h3>
-                                        <p class="text-muted mb-0">Nesta secção poderás fazer pedidos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-5 mb-md-0">
-                                    <!-- Feature item-->
-                                    <div class="text-center">
-                                        <i class="bi-currency-dollar icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Free to Use</h3>
-                                        <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- Feature item-->
-                                    <div class="text-center">
-                                        <i class="bi-clipboard icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Avaliação após o serviço </h3>
-                                        <p class="text-muted mb-0">Quando o serviço termina, o dono avalia o cuidador (estrelas + comentário), ajudando a criar reputação e confiança dentro da app.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+              <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                <div class="container-fluid px-5">
+                  <div class="row gx-5">
+                    <div class="col-md-6 mb-5">
+                      <!-- Feature item-->
+                      <div class="text-center">
+                        <i class="bi bi-bell-fill" style="font-size: 40px"></i>
+                        <h3 class="font-alt">Notifications and Automatic Reminders</h3>
+                        <p class="text-muted mb-0">
+                          The app sends notifications to remind the user of the day and time of the scheduled request, and also alerts when the service is about to start, in progress, or completed. This helps keep the user informed at all times and prevents forgetting.
+                        </p>
+                      </div>
                     </div>
-                    <div class="col-lg-4 order-lg-0">
-                        <!-- Features section device mockup-->
-                        <div class="features-device-mockup">
-                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop class="gradient-start-color" offset="0%"></stop>
-                                        <stop class="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="50"></circle></svg>
-                                <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
-                            <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                            <div class="device-wrapper">
-                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                    <div class="screen bg-black">
-                                        <!-- PUT CONTENTS HERE:-->
-                                        <!-- * * This can be a video, image, or just about anything else.-->
-                                        <!-- * * Set the max width of your media to 100% and the height to-->
-                                        <!-- * * 100% like the demo example below.-->
-                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/MainApp (online-video-cutter.com).mp4" type="video/mp4" /></video>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-6 mb-5">
+                      <!-- Feature item-->
+                      <div class="text-center">
+                        <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                        <h3 class="font-alt">Requests</h3>
+                        <p class="text-muted mb-0">In this section you can make requests</p>
+                      </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-5 mb-md-0">
+                      <!-- Feature item-->
+                      <div class="text-center">
+                        <i class="bi-currency-dollar icon-feature text-gradient d-block mb-3"></i>
+                        <h3 class="font-alt">Free to Use</h3>
+                        <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <!-- Feature item-->
+                      <div class="text-center">
+                        <i class="bi-clipboard icon-feature text-gradient d-block mb-3"></i>
+                        <h3 class="font-alt">Rating after the service</h3>
+                        <p class="text-muted mb-0">When the service ends, the owner rates the caregiver (stars + comment), helping to build reputation and trust within the app.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-4 order-lg-0">
+                <!-- Features section device mockup-->
+                <div class="features-device-mockup">
+                  <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                        <stop class="gradient-start-color" offset="0%"></stop>
+                        <stop class="gradient-end-color" offset="100%"></stop>
+                      </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="50"></circle>
+                  </svg>
+                  <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                    <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                  </svg>
+                  <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                  <div class="device-wrapper">
+                    <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                      <div class="screen bg-black">
+                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%">
+                          <source src="assets/img/MainApp (online-video-cutter.com).mp4" type="video/mp4" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
         <!-- Call to action section-->
-        <section class="cta py-5" style="background-color: #7c7c7c;">
-  <div class="cta-content text-center text-white" id="language">
-    <div class="container px-5">
+        <section class="cta py-5" style="background-color: #7c7c7c">
+          <div class="cta-content text-center text-white" id="language">
+            <div class="container px-5">
+              <!-- Título -->
+              <h4 class="mb-4" style="font-size: 2rem">Programming languages</h4>
 
-      <!-- Título -->
-      <h4 class="mb-4" style="font-size: 2rem;">Linguagens de programação</h4>
+              <!-- Grid das linguagens -->
+              <div class="row row-cols-5 g-4 justify-content-start">
+                <div class="col text-center">
+                  <img class="my-img" src="./assets/img/CSSFundo.png" />
+                  <p>CSS</p>
+                </div>
 
-      <!-- Grid das linguagens -->
-      <div class="row row-cols-5 g-4 justify-content-start">
+                <div class="col text-center">
+                  <img class="my-img2" src="./assets/img/JS-removebg-preview.png" />
+                  <p>JavaScript</p>
+                </div>
 
-        <div class="col text-center">
-          <img class="my-img" src="./assets/img/CSSFundo.png">
-          <p>CSS</p>
-        </div>
+                <div class="col text-center">
+                  <img class="my-img3" src="./assets/img/Java-removebg-preview.png" />
+                  <p>Java</p>
+                </div>
 
-        <div class="col text-center">
-          <img class="my-img2" src="./assets/img/JS-removebg-preview.png">
-          <p>JavaScript</p>
-        </div>
+                <div class="col text-center">
+                  <img class="my-img4" src="./assets/img/PHP-removebg-preview.png" />
+                  <p>PHP</p>
+                </div>
 
-        <div class="col text-center">
-          <img class="my-img3" src="./assets/img/Java-removebg-preview.png">
-          <p>Java</p>
-        </div>
+                <div class="col text-center">
+                  <img class="my-img5" src="./assets/img/SQL-removebg-preview.png" />
+                  <p>SQL</p>
+                </div>
 
-        <div class="col text-center">
-          <img class="my-img4" src="./assets/img/PHP-removebg-preview.png">
-          <p>PHP</p>
-        </div>
+                <div class="col text-center">
+                  <img class="my-img" src="./assets/img/HTML-removebg-preview.png" />
+                  <p>HTML</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <div class="col text-center">
-          <img class="my-img5" src="./assets/img/SQL-removebg-preview.png">
-          <p>SQL</p>
-        </div>
+        <section class="py-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <h1 class="fw-normal">ABOUT ME</h1>
+              <div class="col-lg-4 text-center" id="about">
+                <img class="rounded-circle mb-3" width="140" height="140" src="assets/img/Avatar.png" />
 
-        <div class="col text-center">
-          <img class="my-img" src="./assets/img/HTML-removebg-preview.png">
-          <p>HTML</p>
-        </div>
+                <h2 class="fw-normal">Francisco Prino</h2>
 
-      </div>
-    </div>
-  </div>
-</section>
+                <p>
+                  I am Francisco, a programming student who is developing a project with an app and the app's website to place online pet service requests to help owners find the best services for their pets.
+                </p>
 
-    
-              <section class="py-5">
-  <div class="container">
-    <div class="row justify-content-center" >
-
-        <h1 class="fw-normal">ABOUT ME  </h1>
-      <div class="col-lg-4 text-center" id="about">
-        <img class="rounded-circle mb-3" width="140" height="140" src="assets/img/Avatar.png">
-
-        <h2 class="fw-normal">Francisco Prino</h2>
-
-        <p>
-          Eu sou Francisco, um estudante de programação que está a desenvolver um projeto com app e site da app para fazer pedidos de animais online para ajudar os seus donos a encontrarem os melhores serviços para os seus animais de estimação.
-        </p>
-
-        <p>
-          <a class="btn btn-secondary" href="#">View details &raquo;</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-            
-    
+                <p>
+                  <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- App badge section-->
-<section class="bg-gradient-primary-to-secondary" id="download">
-                <div class="container-fluid px-5">
-                <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
-                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                </div>
+        <section class="bg-gradient-primary-to-secondary" id="download">
+          <div class="container-fluid px-5">
+            <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+              <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
             </div>
+          </div>
         </section>
         <!-- Footer-->
         <footer class="bg-black text-center py-5">
-            <div class="container-fluid px-5">
-                <div class="text-white-50 small">
-                    <div class="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
-                    <a href="#!">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a href="#!">Terms</a>
-                    <span class="mx-1">&middot;</span>
-                    <a href="#!">FAQ</a>
-                </div>
+          <div class="container-fluid px-5">
+            <div class="text-white-50 small">
+              <div class="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
+              <a href="#!">Privacy</a>
+              <span class="mx-1">&middot;</span>
+              <a href="#!">Terms</a>
+              <span class="mx-1">&middot;</span>
+              <a href="#!">FAQ</a>
             </div>
+          </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -388,5 +372,7 @@
         <script src="js/scripts.js"></script>
 
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+      </div>
+    </main>
+  </body>
 </html>
