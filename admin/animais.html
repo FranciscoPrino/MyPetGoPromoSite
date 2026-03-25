@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Backoffice - Animais</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-success">
+<div class="container-fluid">
+<span class="navbar-brand">🐕 Backoffice - Animais</span>
+<button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#menu">
+Menu
+</button>
+</div>
+</nav>
+
+<!-- OFFCANVAS MENU -->
+
+<div class="offcanvas offcanvas-start" id="menu">
+
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Menu Backoffice</h5>
+<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+
+<div class="offcanvas-body">
+
+<ul class="list-group mb-3">
+
+<a href="backoffice.html" class="list-group-item list-group-item-action">
+📋 Pedidos
+</a>
+
+<a href="animais.html" class="list-group-item list-group-item-action active">
+🐕 Animais
+</a>
+
+<a href="utilizadores.html" class="list-group-item list-group-item-action">
+👤 Utilizadores
+</a>
+
+<a href="Estatísticas.html" class="list-group-item list-group-item-action">
+📊 Estatísticas
+</a>
+
+</ul>
+
+<a href="login.html" class="btn btn-danger w-100">
+Terminar sessão
+</a>
+
+</div>
+
+</div>
+
+<!-- CONTEÚDO -->
+
+<div class="container py-4">
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+<h4>Animais Registados</h4>
+
+<button class="btn btn-success"
+data-bs-toggle="modal"
+data-bs-target="#animalModal"
+onclick="modoInserir()">
+
+➕ Adicionar Animal
+
+</button>
+
+</div>
+
+<!-- FILTROS -->
+
+<div class="mb-3">
+
+<div class="btn-group">
+
+<button class="btn btn-outline-success" onclick="filtrarEstado('Todos')">
+Todos
+</button>
+
+<button class="btn btn-outline-success" onclick="filtrarEstado('Disponível')">
+Disponível
+</button>
+
+<button class="btn btn-outline-warning" onclick="filtrarEstado('Em passeio')">
+Em passeio
+</button>
+
+<button class="btn btn-outline-danger" onclick="filtrarEstado('Adoptado')">
+Adoptado
+</button>
+
+</div>
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<table class="table table-hover align-middle">
+
+<thead class="table-success">
+
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Idade</th>
+<th>Estado</th>
+<th>Ações</th>
+</tr>
+
+</thead>
+
+<tbody id="tabelaAnimais">
+
+<tr id="linha1">
+<td>Rex</td>
+<td>Cão 🐕</td>
+<td>3 anos</td>
+<td><span class="badge bg-success">Disponível</span></td>
+
+<td>
+
+<button class="btn btn-primary btn-sm"
+onclick="editarAnimal('linha1')">
+Editar
+</button>
+
+<button class="btn btn-danger btn-sm"
+onclick="toastEliminar('linha1')">
+Remover
+</button>
+
+</td>
+
+</tr>
+
+<tr id="linha2">
+
+<td>Mimi</td>
+<td>Gato 🐈</td>
+<td>2 anos</td>
+<td><span class="badge bg-warning text-dark">Em passeio</span></td>
+
+<td>
+
+<button class="btn btn-primary btn-sm"
+onclick="editarAnimal('linha2')">
+Editar
+</button>
+
+<button class="btn btn-danger btn-sm"
+onclick="toastEliminar('linha2')">
+Remover
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+
+<div class="modal fade" id="animalModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header bg-success text-white">
+
+<h5 class="modal-title" id="tituloModal">
+Adicionar Animal
+</h5>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<form id="formAnimal">
+
+<input type="hidden" id="linhaEditando">
+
+<div class="mb-3">
+<label class="form-label">Nome</label>
+<input type="text" id="nomeAnimal" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Tipo</label>
+<select id="tipoAnimal" class="form-select">
+<option>Cão 🐕</option>
+<option>Gato 🐈</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Idade</label>
+<input type="text" id="idadeAnimal" class="form-control" placeholder="Ex: 3 anos" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Estado</label>
+<select id="estadoAnimal" class="form-select">
+<option>Disponível</option>
+<option>Em passeio</option>
+<option>Adoptado</option>
+<option>Em tratamento</option>
+</select>
+</div>
+
+</form>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary" data-bs-dismiss="modal">
+Cancelar
+</button>
+
+<button class="btn btn-success" onclick="guardarAnimal()">
+Guardar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TOAST SUCESSO -->
+
+<div class="position-fixed bottom-0 end-0 p-3">
+
+<div id="toastMensagem" class="toast text-white bg-success border-0">
+
+<div class="d-flex">
+
+<div class="toast-body" id="toastTexto"></div>
+
+<button class="btn-close btn-close-white me-2 m-auto"
+data-bs-dismiss="toast"></button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TOAST CONFIRMAR -->
+
+<div class="position-fixed bottom-0 start-0 p-3">
+
+<div id="toastConfirmar" class="toast bg-danger text-white border-0">
+
+<div class="toast-body">
+
+<div>Deseja remover este animal?</div>
+
+<div class="mt-2 pt-2 border-top">
+
+<button class="btn btn-light btn-sm"
+onclick="confirmarEliminar()">
+Sim
+</button>
+
+<button class="btn btn-secondary btn-sm"
+data-bs-dismiss="toast">
+Não
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let linhaSelecionada=null;
+
+function mostrarToast(msg){
+
+document.getElementById("toastTexto").innerText=msg;
+
+new bootstrap.Toast(
+document.getElementById("toastMensagem")
+).show();
+
+}
+
+function modoInserir(){
+
+document.getElementById("tituloModal").innerText="Adicionar Animal";
+
+document.getElementById("formAnimal").reset();
+
+document.getElementById("linhaEditando").value="";
+
+}
+
+function guardarAnimal(){
+
+let nome=document.getElementById("nomeAnimal").value;
+let tipo=document.getElementById("tipoAnimal").value;
+let idade=document.getElementById("idadeAnimal").value;
+let estado=document.getElementById("estadoAnimal").value;
+
+let linhaEditando=document.getElementById("linhaEditando").value;
+
+if(linhaEditando===""){
+
+let id="linha"+Date.now();
+
+let novaLinha=`
+<tr id="${id}">
+<td>${nome}</td>
+<td>${tipo}</td>
+<td>${idade}</td>
+<td>${badgeEstado(estado)}</td>
+<td>
+<button class="btn btn-primary btn-sm" onclick="editarAnimal('${id}')">Editar</button>
+<button class="btn btn-danger btn-sm" onclick="toastEliminar('${id}')">Remover</button>
+</td>
+</tr>
+`;
+
+document.getElementById("tabelaAnimais").innerHTML+=novaLinha;
+
+mostrarToast("Animal adicionado com sucesso");
+
+}else{
+
+let linha=document.getElementById(linhaEditando);
+
+linha.children[0].innerText=nome;
+linha.children[1].innerText=tipo;
+linha.children[2].innerText=idade;
+linha.children[3].innerHTML=badgeEstado(estado);
+
+mostrarToast("Animal atualizado");
+
+}
+
+bootstrap.Modal.getInstance(
+document.getElementById("animalModal")
+).hide();
+
+}
+
+function badgeEstado(estado){
+
+let cor="success";
+
+if(estado==="Em passeio") cor="warning";
+if(estado==="Adoptado") cor="danger";
+if(estado==="Em tratamento") cor="secondary";
+
+return `<span class="badge bg-${cor}">${estado}</span>`;
+
+}
+
+function editarAnimal(id){
+
+let linha=document.getElementById(id);
+
+document.getElementById("nomeAnimal").value=linha.children[0].innerText;
+document.getElementById("tipoAnimal").value=linha.children[1].innerText;
+document.getElementById("idadeAnimal").value=linha.children[2].innerText;
+document.getElementById("estadoAnimal").value=linha.children[3].innerText;
+
+document.getElementById("linhaEditando").value=id;
+
+document.getElementById("tituloModal").innerText="Editar Animal";
+
+new bootstrap.Modal(
+document.getElementById("animalModal")
+).show();
+
+}
+
+function toastEliminar(id){
+
+linhaSelecionada=id;
+
+new bootstrap.Toast(
+document.getElementById("toastConfirmar")
+).show();
+
+}
+
+function confirmarEliminar(){
+
+document.getElementById(linhaSelecionada).remove();
+
+bootstrap.Toast.getInstance(
+document.getElementById("toastConfirmar")
+).hide();
+
+mostrarToast("Animal removido com sucesso");
+
+}
+
+function filtrarEstado(estado){
+
+let linhas=document.querySelectorAll("#tabelaAnimais tr");
+
+linhas.forEach(linha=>{
+
+let estadoLinha=linha.children[3].innerText;
+
+linha.style.display=
+(estado==="Todos"||estadoLinha===estado)
+?"":"none";
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
